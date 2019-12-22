@@ -1,0 +1,231 @@
+body, HTML {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+	overflow: hidden;
+}
+
+.background {
+	background: linear-gradient(to right, rgba(0,0,0,0.26),rgba(0, 0, 0, 0.48)),url("image/background.png");
+	background-repeat: repeat;
+	position: absolute;
+	left: 0;
+	right: 445px;
+	top: 0;
+	bottom: -1px;
+}
+
+.logo {
+	width: 128px;
+	height: 128px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #4285f4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 27px 24px 0 rgba(0,0,0,.2), 0 40px 77px 0 rgba(0,0,0,.22);
+}
+
+.logo-background {
+	width: 112px;
+	height: 112px;
+	background: #fff;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 27px 24px 0 rgba(0,0,0,.2), 0 40px 77px 0 rgba(0,0,0,.22);
+}
+
+.login {
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	width: 445px;
+	z-index: 2;
+	background: #fff;
+	border-top: 15px solid rgb(66, 133, 244);
+	padding: 63px 14px;
+	box-sizing: border-box;
+}
+
+.login-case {
+	padding: 15px;
+	border-radius: 6px;
+	background: rgba(242, 242, 242, 0.5);
+}
+
+.login h1 {
+	color: #3b3b3b;
+	font-weight: 300;
+	margin-top: 0;
+	font-size: 22px;
+	margin-bottom: 30px;
+}
+
+.login .group {
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
+.login .label {
+	color: #3b3b3b;
+	font-weight: 300;
+	display: block;
+	max-width: 635px;
+	font-size: 14px;
+	padding-bottom: .8em;
+	-webkit-user-select: none;
+	user-select: none;
+	padding-left: 10px;
+}
+
+.login input {
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	padding: .375rem .75rem;
+	font-size: 14px;
+	font-size: .875rem;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-image: none;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+	outline-color: #3b3b3b;
+	box-sizing: border-box;
+	outline: none;
+}
+
+input:focus {
+	box-shadow: 0 27px 24px 0 rgba(0,0,0,.2), 0 40px 77px 0 rgba(0,0,0,.22);
+}
+
+.alert-danger {
+	color: #b94a48;
+	padding: 15px;
+	margin-top: 15px;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.alert-dismissable .close {
+	position: relative;
+	top: -2px;
+	color: inherit;
+}
+
+button.close {
+	padding: 0;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	-webkit-appearance: none;
+	float: right;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 1;
+	color: #000000;
+	text-shadow: 0 1px 0 #ffffff;
+	opacity: 0.2;
+}
+
+/* Mobile View */
+@media screen and (max-width: 950px) {
+	body { background: unset }
+	.background { display: none }
+
+	.login {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		border-top: unset;
+		overflow-y: auto;
+	}
+}
+
+@media screen and (max-width: 509px) {
+	.login .group { max-width: 95% }
+}
+
+.cb-group {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 20px 24px;
+	position: relative;
+}
+
+.cb-group label {
+	font-size: 16px;
+	cursor: pointer;
+	color: #3b3b3b;
+	margin-right: 20px;
+}
+
+.checkbox {
+	position: relative;
+	margin: 0 1rem 0 0;
+	cursor: pointer;
+	width: unset !important;
+}
+
+.checkbox:before {
+	transition: all 0.3s ease-in-out;
+	content: "";
+	position: absolute;
+	left: 0;
+	z-index: 1;
+	width: 1rem;
+	height: 1rem;
+	border: 2px solid #f2f2f2;
+}
+
+.checkbox:checked:before {
+	transform: rotate(-45deg);
+	height: .5rem;
+	border-color: #009688;
+	border-top-style: none;
+	border-right-style: none;
+}
+
+.checkbox:after {
+	content: "";
+	position: absolute;
+	top: -0.125rem;
+	left: 0;
+	width: 1.1rem;
+	height: 1.1rem;
+	background: #fff;
+	cursor: pointer;
+}
+
+.standardBtn {
+	text-decoration: none;
+	background: rgb(66, 133, 244);
+	color: #fff;
+	padding: 6px 12px;
+	border-radius: 2px;
+	cursor: pointer;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.2s ease;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	user-select: none;
+}
+
+.standardBtn:hover {
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<!--
+		Produced 2019
+		By https://github.com/amattu2
+		Copy Alec M.
+		License GNU Affero General Public License v3.0
+	-->
+	<head>
+		<!-- Title, Meta, Etc -->
+		<title>Login Page Design</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="robots" content="noindex,nofollow">
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="login.css">
+	</head>
+
+	<body>
+		<!-- Background -->
+		<div class='background'>
+			<div class='logo'>
+				<div class='logo-background'>
+					<img src='https://via.placeholder.com/32x32' />
+				</div>
+			</div>
+		</div>
+
+		<!-- Login Section -->
+		<div class='login'>
+			<div class='login-case'>
+				<!-- Logo Header -->
+				<h1>Login</h1>
+
+				<!-- Login Form -->
+				<form>
+					<!-- Username -->
+					<div class='group'>
+						<span class='label'>Username</span>
+						<input name="username" id="username" type="text" class="form-control"  autocomplete="myusername" placeholder="Enter your Username" autofocus>
+					</div>
+
+					<!-- Password -->
+					<div class='group'>
+						<span class='label'>Password</span>
+						<input name="password" id="password" type="password" class="form-control"  autocomplete="new-password" placeholder="Enter your Password">
+					</div>
+
+					<!-- Submit -->
+					<div class="cb-group">
+						<label for="signed-in">Remember Me</label>
+						<input id="signed-in" type="checkbox" class="checkbox" checked="">
+						<div class="standardBtn" name="Submit" id="submit" type="submit" style="margin-left: auto; width: 80px;">Continue</div>
+					</div>
+
+					<!-- Success/Failure -->
+					<div id="message"></div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
